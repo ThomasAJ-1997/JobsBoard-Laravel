@@ -11,6 +11,8 @@ class Job extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['title', 'salary', 'location', 'work', 'url', 'featured'];
+
     public function employer() :belongsTo
     {
         return $this->belongsTo(Employer::class);
